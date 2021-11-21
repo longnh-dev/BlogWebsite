@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
 const port = 2002
+const morgan = require('morgan')
+
+app.use(morgan('combined'))
 
 app.get('/home', (req, res)=> {
     return res.send('Hello World')
